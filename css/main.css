@@ -1,0 +1,408 @@
+html,
+body,
+#page {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navigation */
+/* https://codepen.io/noisefactor/pen/RGvEjG */
+
+/* header */
+
+.kowhai-navigation {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+}
+
+.kowhai-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.kowhai-navigation .menu-item a {
+  display: block;
+  padding: 20px 50px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.kowhai-navigation .menu-item a:hover,
+.kowhai-navigation .menu-btn:hover {
+  background-color: #FFE32E;
+}
+
+.kowhai-navigation .site-branding {
+  display: block;
+  float: left;
+  text-decoration: none;
+  max-height: 64px;
+}
+
+/* logo */
+.custom-logo {
+  max-height: 64px;
+  object-fit: contain;
+  line-height: 0;
+}
+
+
+/* menu */
+
+.kowhai-navigation .top-menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.kowhai-navigation .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.kowhai-navigation .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.kowhai-navigation .menu-icon .navicon:before,
+.kowhai-navigation .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.kowhai-navigation .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.kowhai-navigation .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.kowhai-navigation .menu-btn {
+  display: none;
+}
+
+.kowhai-navigation .menu-btn:checked~.menu-menu-1-container>.top-menu {
+  max-height: 300px;
+  /* max-height: none; */
+}
+
+.kowhai-navigation .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.kowhai-navigation .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.kowhai-navigation .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.kowhai-navigation .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.kowhai-navigation .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* site content */
+.site-content {
+  margin: 64px 0 0 0;
+}
+
+/* contact page width */
+.contact {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact p:nth-child(1) {
+  font-size: 1.5em;
+}
+
+.contact .wpcf7-form {
+  margin: 0 auto;
+}
+
+/* about page width */
+.about p {
+  margin: 1em 0;
+}
+
+/* entry content */
+.entry-content {
+  margin: 0;
+}
+
+/* image */
+.post-thumbnail img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* footer */
+.site-footer {
+  padding: 30px 15px;
+}
+
+/* social menu */
+.social-menu {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+  text-align: center;
+}
+
+.social-menu li {
+  padding: 0.2em 2em;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+.social-menu a {
+  font-family: "Raleway", sans-serif;
+}
+
+.social-menu li:hover,
+.social-menu a:hover {
+  color: #000000;
+  background-color: #FFE32E;
+}
+
+.fa-instagram:before,
+.fa-facebook-f:before {
+  padding-right: 10px;
+}
+
+/* fonts */
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+}
+
+h1 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 3em;
+  line-height: 1.15;
+  margin: 0.2em 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Alegreya", serif;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: "Alegreya", serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+a,
+a:visited {
+  color: #232323;
+  /* transition: color 0.3s ease; */
+}
+
+ul .top-menu {
+  color: #000000;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* animation */
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+/* buttons */
+.btn-info {
+  cursor: pointer;
+  background-color: #FFE32E;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  margin: 0 0 20px 0;
+}
+
+.btn-info:hover {
+  border: 1px solid #000000;
+  background-color: #ffee84;
+  transition: all .2s ease-in-out;
+}
+
+.btn-enquire {
+  cursor: pointer;
+  background-color: #FFE32E;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin: 0 0 20px 0;
+}
+
+.btn-enquire:hover {
+  background-color: #ffee84;
+  transition: all .2s ease-in-out;
+}
+
+/* input */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 3px;
+  border-radius: 0;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+/* submit */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #FFE32E;
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #000000;
+  padding: 10px 35px;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border: 1px solid #000000;
+  background-color: #ffee84;
+  transition: all .2s ease-in-out;
+}
+
+
+/* tablet portrait */
+@media only screen and (min-width: 768px) {
+
+  /* navigation */
+  .site-header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-branding {
+    flex-grow: 1;
+  }
+
+  .kowhai-navigation {
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .kowhai-navigation .menu-item {
+    float: left;
+  }
+
+  .kowhai-navigation .menu-item a {
+    padding: 20px 30px;
+  }
+
+  .kowhai-navigation .top-menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .kowhai-navigation .menu-icon {
+    display: none;
+  }
+  
+  /* about text */
+  .about p {
+    font-size: 1.4em;
+  }
+
+  /* site content */
+  .page {
+    margin: 0;
+  }
+
+  /* content page width */
+  .contact {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* footer */
+  .site-footer {
+    padding: 30px 35px;
+  }
+}
+
+/* small desktop */
+@media only screen and (min-width: 1024px) {
+  .about {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .about p {
+    font-size: 1.4em;
+  }
+}
+
+/* large desktop */
+@media only screen and (min-width: 1200px) {}

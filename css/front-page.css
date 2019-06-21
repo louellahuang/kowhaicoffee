@@ -1,0 +1,50 @@
+.post-thumbnail {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.post-thumbnail:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255, 0.5);
+    transition: all .3s linear;
+}
+
+.post-thumbnail img {
+    height: 70vh;
+    object-fit: cover;
+    /* filter: hue-rotate(328deg); */
+    /* -webkit-filter: hue-rotate(328deg); */
+}
+
+.inner {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.entry-title {
+    margin: 1em 0;
+}
+
+.lead {
+    text-align: center;
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* small desktop */
+@media only screen and (min-width: 1024px) {
+    
+}
